@@ -13,3 +13,5 @@ function printImg(event) {
 }
 
 document.getElementById('meme-insert').addEventListener('input', printImg);
+
+
