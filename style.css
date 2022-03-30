@@ -5,15 +5,18 @@
   width: 400px;
   height: 400px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
 }
 
 #meme-image {
+  border: none;
   display: flex;
+  position: relative;
 }
 
+
 #meme-text {
+  display: flex;
+  position: absolute;
   margin: 20px;
   color: white;
   font-size: 30px;

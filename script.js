@@ -7,9 +7,10 @@ function printText() {
 document.getElementById('text-input').addEventListener('input', printText);
 
 // Adiciona a imagem ao meme ao ser selecionada
+const memeId = 'meme-image';
 function printImg() {
   const img = URL.createObjectURL(this.files[0]);
-  document.getElementById('meme-image-container').style.backgroundImage = `url(${img})`;
+  document.getElementById(memeId).style.backgroundImage = `url(${img})`;
 }
 
 document.getElementById('meme-insert').addEventListener('input', printImg);
@@ -26,6 +27,25 @@ function customer() {
   }
 }
 
-for (const btn of document.getElementsByTagName('button')) {
-  btn.addEventListener('click', customer);
+[...document.getElementsByTagName('button')].forEach((element) => {
+  element.addEventListener('click', customer);
+});
+
+// Adiciona imagens prontas ao fundo do meme
+function setImg() {
+  const tag = document.getElementById(memeId);
+  console.log(this.src);
+  if (this.id === 'meme-1') {
+    tag.src = this.src;
+  } else if (this.id === 'meme-2') {
+    tag.src = this.src;
+  } else if (this.id === 'meme-3') {
+    tag.src = this.src;
+  } else {
+    tag.src = this.src;
+  }
 }
+
+[...document.getElementsByTagName('img')].forEach((element) => {
+  element.addEventListener('click', setImg);
+});
