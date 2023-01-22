@@ -9,7 +9,7 @@ document.getElementById('text-input').addEventListener('input', () => {
 // Adiciona a imagem ao meme ao ser selecionada
 document.getElementById('meme-insert').addEventListener('input', (element) => {
   const img = URL.createObjectURL(element.target.files[0]);
-  memeId.style.backgroundImage = `url(${img})`;
+  memeId.src = img;
 });
 
 // Adiciona estilo à borda do meme
